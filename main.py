@@ -2,6 +2,7 @@ import PySimpleGUI as sg
 import random
 from datetime import datetime
 
+
 sg.theme('GrayGrayGray')
 
 col = [
@@ -24,18 +25,14 @@ col = [
     [sg.Checkbox("Mostrar array pós algoritmo", default=False, key="showReorganizedArray")],
     [sg.Checkbox("Mensagens minimas", default=False, key="minimalMsgs")],
 
-
     [sg.Button('Ordenar'), sg.Button('Fechar')]
 ]
 
 layout = [
-    [sg.Column(col), 
-    sg.Multiline(default_text="------------------ Software iniciado ------------------\n", size=(40,22), disabled=True, autoscroll=True , key="output")
-    ],
+    [sg.Column(col), sg.Multiline(default_text="------------------ Software iniciado ------------------\n", size=(40,22), disabled=True, autoscroll=True , key="output")],
 ]
 
 window = sg.Window('Algoritmos De Ordenação', layout)
-
 
 
 def printM(text):
@@ -168,8 +165,7 @@ while True:  # Event Loop
                 printM("Invertendo array...")
             array = array[::-1]
         if values["showShuffledArray"]:
-            printArray(array)
-            
+            printArray(array)   
 
         alg = ""
         tstart = datetime.now()
